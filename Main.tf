@@ -34,7 +34,7 @@ resource "aws_instance" "web" {
   ami                    = "ami-03f4878755434977f"
   instance_type          = "t2.large"
   key_name               = "withoutpekey-test"
-  vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
+  vpc_security_group_ids = sg-094055190848e2e75
   user_data              = templatefile("./install_jenkins.sh", {})
 
   tags = {
